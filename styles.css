@@ -9,7 +9,7 @@
 .resume {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-row-gap: 2rem;
     margin-top: 3rem;
     margin-left: 2.5rem;
@@ -192,4 +192,93 @@ h4 {
 .certifications li {
     list-style-type: disc;
     font-size: 1.2rem;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: rgb(7, 79, 97);
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    transform: skewY(5deg);
+    grid-column: 1/3;
+}
+
+.contact-form-card {
+    transform: skewY(-5deg);
+    margin: 0 auto 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+.card {
+    padding: 40px;
+    max-width: 840px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px #909090;
+}
+
+button {
+    background-color: rgb(7, 79, 97);
+    color: #fff;
+    border: none;
+    min-height: 40px;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px #909090;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.3);
+}
+
+.input-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group.half-class {
+    width: 49%;
+    float: left;
+}
+
+.input-group.clear-class {
+    padding-top: 20px;
+}
+
+.input-group span {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+}
+
+input,
+textarea {
+    min-height: 40px;
+}
+
+input {
+    border: none;
+    background-color: #f0f0f0;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+#title {
+    background-color: white;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+.warning {
+    outline: 1px solid red;
 }
