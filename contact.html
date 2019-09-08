@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Vue,Python,PHP">
+    <meta name="author" content="Raphael Okeibunor">
+    <meta name="description" content="Contact Raphael Okeibunor, Front-End Web Developer">
+    <title>Raphael Okeibunor Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Contact Form -->
+    <div id="contact-form" class="contact-form">
+        <div class="contact-form-card card">
+            <h1>Contact Raphael</h1>
+            <p>I will be glad to hear from you</p>
+            <form action="welcome_post.php" method="post">
+                <div class="input-group half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <span>Name is required and must be more than 4 characters</span>
+                </div>
+                <div class="input-group half last">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <span>Email is required, must include @</span>
+                </div>
+                <div class="input-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" placeholder="Subject of message">
+                    <span>Title should be more than 4 characters</span>
+                </div>
+                <div class="input-group text-area clear">
+                    <label for="message" hidden>Message</label>
+                    <textarea name="message" id="message" placeholder="I would like..."></textarea>
+                    <span>Message should be more than 20 characters</span>
+                </div>
+                <button type="submit" name="submitBtn" onclick="return formValidation()">Send</button>
+            </form>
+            <p class="twitter">Feel Free to follow <a href="http://twitter.com/Sage_JKMF" rel="author"
+                    title="Follow Raphael on twitter">Raphael
+                    Okeibunor</a> on twitter</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

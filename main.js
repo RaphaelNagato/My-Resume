@@ -37,39 +37,43 @@ const message = document.querySelector("#message");
 const title = document.querySelector("#title");
 
 //* The form is validated when the submit button is clicked.
-document
-  .querySelector("[type='submit']")
-  .addEventListener("click", function(event) {
-    event.preventDefault(); //Prevents the button from refreshing the page
+function formValidation() {
+  //* If validation of email fails, add the warning class to email input and set the display of warning message to inline.
+  if (!validation.isEmailValid(email.value)) {
+    email.classList.add("warning");
+    email.nextElementSibling.style.display = "inline";
+  }
+  //* If validation of name fails, add the warning class to name input and set the display of warning message to inline.
+  if (!validation.isNameValid(name.value)) {
+    name.classList.add("warning");
+    name.nextElementSibling.style.display = "inline";
+  }
+  /*
+   * If validation of message fails, add the warning class to message text area and set the display of warning
+   * message to inline
+   */
+  if (!validation.isMessageValid(message.value)) {
+    message.classList.add("warning");
+    message.nextElementSibling.style.display = "inline";
+  }
+  /*
+   *If validation of title fails, add the warning class to title input and set the display of warning
+   *message to inline
+   */
 
-    //* If validation of email fails, add the warning class to email input and set the display of warning message to inline.
-    if (!validation.isEmailValid(email.value)) {
-      email.classList.add("warning");
-      email.nextElementSibling.style.display = "inline";
-    }
-    //* If validation of name fails, add the warning class to name input and set the display of warning message to inline.
-    if (!validation.isNameValid(name.value)) {
-      name.classList.add("warning");
-      name.nextElementSibling.style.display = "inline";
-    }
-    /*
-     * If validation of message fails, add the warning class to message text area and set the display of warning
-     * message to inline
-     */
-    if (!validation.isMessageValid(message.value)) {
-      message.classList.add("warning");
-      message.nextElementSibling.style.display = "inline";
-    }
-    /*
-     *If validation of title fails, add the warning class to title input and set the display of warning
-     *message to inline
-     */
-
-    if (!validation.isTitleValid(title.value)) {
-      title.classList.add("warning");
-      title.nextElementSibling.style.display = "inline";
-    }
-  });
+  if (!validation.isTitleValid(title.value)) {
+    title.classList.add("warning");
+    title.nextElementSibling.style.display = "inline";
+  }
+  if (
+    validation.isEmailValid(email.value) &&
+    validation.isNameValid(name.value) &&
+    validation.isTitleValid(title.valid) &&
+    validation.isMessageValid(message.value)
+  ) {
+    return true;
+  } else return false;
+}
 
 // * Validate name input when it loses focus
 name.addEventListener("blur", function() {
