@@ -1,304 +1,304 @@
 :root {
-    --main-color: rgb(7, 79, 97);
+  --main-color: rgb(7, 79, 97);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .resume {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 2rem;
-    margin-top: 3rem;
-    margin-left: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 2rem;
+  margin-top: 3rem;
+  margin-left: 2.5rem;
 }
 
 .intro {
-    grid-column: 1/3;
-    background-color: var(--main-color);
-    height: 18rem;
-    padding-left: 2rem;
-    color: white;
+  grid-column: 1/3;
+  background-color: var(--main-color);
+  height: 18rem;
+  padding-left: 2rem;
+  color: white;
 }
 
 .info-skills-interests {
-    grid-row: 2/6;
+  grid-row: 2/6;
 }
 
 p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* Intro */
 .img-and-title {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 1rem;
 }
 
 img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .title h1 {
-    font-size: 2.5em;
-    margin-bottom: 0;
+  font-size: 2.5em;
+  margin-bottom: 0;
 }
 
 .title h3 {
-    margin-top: 0.5em;
-    text-decoration: underline;
+  margin-top: 0.5em;
+  text-decoration: underline;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
 }
 
 a:hover {
-    color: blue;
+  color: blue;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 h4 {
-    font-size: 1.7em;
-    color: rgb(7, 79, 97);
-    margin-bottom: 0.7rem;
+  font-size: 1.7em;
+  color: rgb(7, 79, 97);
+  margin-bottom: 0.7rem;
 }
-
 
 /* Personal Info */
 .info i {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 .info p {
-    margin-top: 0;
-    padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Skills */
 .bar {
-    width: 70%;
-    background-color: #ddd;
+  width: 70%;
+  background-color: #ddd;
 }
 
 .progress {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
 }
 
 .team,
 .comms,
 .html {
-    width: 90%;
-    background-color: var(--main-color);
+  width: 90%;
+  background-color: var(--main-color);
 }
 
 .time,
 .js {
-    width: 70%;
-    background-color: var(--main-color);
+  width: 70%;
+  background-color: var(--main-color);
 }
 
 .jquery,
 .vue {
-    width: 50%;
-    background-color: var(--main-color);
+  width: 50%;
+  background-color: var(--main-color);
 }
 
 /* Interests */
 .interests span {
-    border: solid 1px grey;
-    border-radius: 5px;
-    margin-right: 1rem;
-    padding: 0.3rem;
-    font-size: 1.2rem;
+  border: solid 1px grey;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
 }
 
 /* Education */
-.education>p:first-of-type {
-    color: var(--main-color);
-    font-size: 1.5rem;
+.education > p:first-of-type {
+  color: var(--main-color);
+  font-size: 1.5rem;
 }
 
-.education>p:nth-of-type(2) {
-    color: black;
-    font-size: 1.5rem;
-
+.education > p:nth-of-type(2) {
+  color: black;
+  font-size: 1.5rem;
 }
 
 .education span {
-    display: inline-block;
-    width: 40%;
-    color: var(--main-color);
-    font-size: 1.2rem;
+  display: inline-block;
+  width: 40%;
+  color: var(--main-color);
+  font-size: 1.2rem;
 }
 
-.education>span:last-of-type {
-    text-align: right;
+.education > span:last-of-type {
+  text-align: right;
 }
 
 /* Projects */
 .projects ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 .projects p {
-    font-size: 1.5rem;
-    margin-bottom: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 .projects a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Work Experience */
 .work-exp div p:first-of-type {
-    color: var(--main-color);
-    margin-bottom: 0;
-    font-size: 1.5rem;
+  color: var(--main-color);
+  margin-bottom: 0;
+  font-size: 1.5rem;
 }
 
 .work-exp div p:nth-of-type(2) {
-    font-size: 1.3rem;
-    margin-top: 0;
+  font-size: 1.3rem;
+  margin-top: 0;
 }
 
 .work-exp div p:nth-of-type(3) {
-    color: var(--main-color);
-    margin-bottom: 0;
+  color: var(--main-color);
+  margin-bottom: 0;
 }
 
 .work-exp div span {
-    display: inline-block;
-    width: 100%;
-    font-size: 1.2em;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.2em;
 }
 
 .work-exp ul {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 /* Certifications */
 .certifications li {
-    list-style-type: disc;
-    font-size: 1.2rem;
+  list-style-type: disc;
+  font-size: 1.2rem;
 }
 
 /* Contact Form */
 .contact-form {
-    background-color: rgb(7, 79, 97);
-    width: 100%;
-    padding-bottom: 40px;
-    padding-top: 20px;
-    transform: skewY(5deg);
-    margin-top: 5rem;
+  background-color: rgb(7, 79, 97);
+  width: 100%;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  transform: skewY(5deg);
+  margin-top: 5rem;
 }
 
 .contact-form-card {
-    transform: skewY(-5deg);
-    margin: 0 auto 40px;
+  transform: skewY(-5deg);
+  margin: 0 auto 40px;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .card {
-    padding: 40px;
-    max-width: 840px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 5px #909090;
+  padding: 40px;
+  max-width: 840px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px #909090;
 }
 
 button {
-    background-color: rgb(7, 79, 97);
-    color: #fff;
-    border: none;
-    min-height: 40px;
-    padding: 15px 40px;
-    box-shadow: 0 2px 5px #909090;
-    border-radius: 5px;
+  background-color: rgb(7, 79, 97);
+  color: #fff;
+  border: none;
+  min-height: 40px;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px #909090;
+  border-radius: 5px;
 }
 
 button:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .input-group {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .input-group.half-class {
-    width: 49%;
-    float: left;
+  width: 49%;
+  float: left;
 }
 
 .input-group.clear-class {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .input-group span {
-    display: none;
-    color: red;
-    font-size: 0.8rem;
+  display: none;
+  color: red;
+  font-size: 0.8rem;
 }
 
 input,
 textarea {
-    min-height: 40px;
+  min-height: 40px;
 }
 
 input {
-    border: none;
-    background-color: #f0f0f0;
-    margin-left: 20px;
-    padding-left: 20px;
+  border: none;
+  background-color: #f0f0f0;
+  margin-left: 20px;
+  padding-left: 20px;
 }
 
 #title {
-    background-color: white;
+  background-color: white;
 }
 
 textarea {
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-bottom: solid 1px #f0f0f0;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: solid 1px #f0f0f0;
 }
 
 .warning {
-    outline: 1px solid red;
+  outline: 1px solid red;
 }
 
-
 .link-to-contact {
-    width: 8%;
-    position: fixed;
-    padding: 0;
-    right: 2rem;
-    bottom: 10rem;
+  width: 8%;
+  height: 15%;
+  position: fixed;
+  padding: 0;
+  right: 2rem;
+  bottom: 10rem;
+  background-color: red;
+  cursor: pointer;
 }
 
 .link-to-contact a {
-    color: white;
-    padding: 0;
-    font-weight: bolder;
+  color: white;
+  padding: 0;
+  font-weight: bolder;
 }
 
 .twitter a {
-    color: var(--main-color);
-    font-weight: bold;
+  color: var(--main-color);
+  font-weight: bold;
 }
