@@ -1,15 +1,12 @@
-# My-Resume
+# Description
 
-This is my resume made only using HTML5
+A simple frontend that consumes a backend api written in golang
 
-# Link to my Tweet about Flutter
+[Link To API Repo](https://github.com/RaphaelNagato/goresume-api)
 
-https://twitter.com/Sage_JKMF/status/1165028434038448128?s=20
+# Acknowledgement
 
-# Link to First Lucid Post
+Special thanks to the Zuri, HNG, Ingressive4Good Teams
 
-https://lucid.blog/raphaelnagato19/post/1566605557
-
-# Link to my Lucid blog post about adding CSS to HTML
-
-https: //lucid.blog/raphaelnagato19/post/the-style-to-my-html-b21
+![Screenshot](./zuri.png)
+[Click here to know more](https://internship.zuri.team/)

@@ -1,21 +1,22 @@
 //* This Validation IIFE module is going to validate the inputs.
-const validation = (function() {
+const validation = (function () {
   // Regular Expressions are set and used to test the inputs.
-  const isEmailValidRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const isEmailValidRegEx =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const isNameValidRegEx = /^[a-z]{4,}/i;
   const isTitleValidRegEx = /[a-z]{4,}/i;
 
-  const isEmailValid = email => {
+  const isEmailValid = (email) => {
     return isEmailValidRegEx.test(email);
   };
-  const isNameValid = name => {
+  const isNameValid = (name) => {
     return isNameValidRegEx.test(name);
   };
-  const isTitleValid = title => {
+  const isTitleValid = (title) => {
     return isTitleValidRegEx.test(title);
   };
   //   This checks the length of the message characters.
-  const isMessageValid = message => {
+  const isMessageValid = (message) => {
     if (message.length >= 20) {
       return true;
     }
@@ -26,7 +27,7 @@ const validation = (function() {
     isEmailValid,
     isMessageValid,
     isNameValid,
-    isTitleValid
+    isTitleValid,
   };
 })();
 
@@ -76,7 +77,7 @@ function formValidation() {
 }
 
 // * Validate name input when it loses focus
-name.addEventListener("blur", function() {
+name.addEventListener("blur", function () {
   if (validation.isNameValid(name.value)) {
     name.classList.remove("warning");
     name.nextElementSibling.style.display = "none";
@@ -84,7 +85,7 @@ name.addEventListener("blur", function() {
 });
 
 //* Validate email input when it loses focus
-email.addEventListener("blur", function() {
+email.addEventListener("blur", function () {
   if (validation.isEmailValid(email.value)) {
     email.classList.remove("warning");
     email.nextElementSibling.style.display = "none";
@@ -92,7 +93,7 @@ email.addEventListener("blur", function() {
 });
 
 //* Validate title input when it loses focus
-title.addEventListener("blur", function() {
+title.addEventListener("blur", function () {
   if (validation.isTitleValid(title.value)) {
     title.classList.remove("warning");
     title.nextElementSibling.style.display = "none";
@@ -100,9 +101,42 @@ title.addEventListener("blur", function() {
 });
 
 //* Validate message input when it loses focus
-message.addEventListener("blur", function() {
+message.addEventListener("blur", function () {
   if (validation.isMessageValid(message.value)) {
     message.classList.remove("warning");
     message.nextElementSibling.style.display = "none";
   }
 });
+
+form = document.querySelector("#form");
+result = document.querySelector(".result");
+form.addEventListener("submit", submitDetails);
+
+function submitDetails(e) {
+  e.preventDefault();
+  const data = {
+    subject: title.value,
+    message: message.value,
+    name: name.value,
+    sender: email.value,
+  };
+
+  fetch("https://goresume-api.herokuapp.com/messages", {
+    method: "POST", // or 'PUT'
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("You have submitted successfully");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Could not submit your message, Try later");
+    });
+}
+
+console.log("Hello, I am Raphael");
